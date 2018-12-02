@@ -10,7 +10,6 @@ import sys
 
 class WarningBox(QMessageBox):
     def __init__(self, msg, title='Warning', detailed_msg='', parent=None, pos=None):
-        #super(WarningBox, self).__init__(parent=parent)
         QMessageBox.__init__(self, parent=parent)
         self.setIcon(self.Warning)
         self.setText(msg)
