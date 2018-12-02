@@ -14,7 +14,6 @@ class WarningBox(QMessageBox):
         self.setIcon(self.Warning)
         self.setText(msg)
         self.setStandardButtons(self.Ok)
-        self.btn = self.Ok
         self.setDetailedText(detailed_msg)
         self.setWindowTitle(title)
         if pos:
