@@ -20,7 +20,7 @@ def left_click():
 @pytest.fixture(scope='module')
 def warning_box():
     app = QtGui.QApplication(sys.argv)
-    wb = WarningBox("test")
+    wb = WarningBox("test", pos=(0, 0))
     yield wb
     try:
         sys.exit(0)

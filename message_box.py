@@ -9,7 +9,7 @@ import sys
 
 
 class WarningBox(QMessageBox):
-    def __init__(self, msg, title='Warning', detailed_msg='', parent=None):
+    def __init__(self, msg, title='Warning', detailed_msg='', parent=None, pos=None):
         #super(WarningBox, self).__init__(parent=parent)
         QMessageBox.__init__(self, parent=parent)
         self.setIcon(self.Warning)
@@ -18,11 +18,8 @@ class WarningBox(QMessageBox):
         self.btn = self.Ok
         self.setDetailedText(detailed_msg)
         self.setWindowTitle(title)
-        self.move(0, 0)
-        #self.exec_()
-
-    def get_clicked(self):
-        return self.clickedButton()
+        if pos:
+            self.move(pos)
 
     def mousePressEvent(self, QMouseEvent):
-        print "wb", QMouseEvent.pos()
+        print "{}: Mouse clicked at:{}".format(__name__, QMouseEvent.pos())
