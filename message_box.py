@@ -17,7 +17,7 @@ class WarningBox(QMessageBox):
         self.setDetailedText(detailed_msg)
         self.setWindowTitle(title)
         if pos:
-            self.move(pos)
+            self.move(*pos)
 
     def mousePressEvent(self, QMouseEvent):
         print "{}: Mouse clicked at:{}".format(__name__, QMouseEvent.pos())
