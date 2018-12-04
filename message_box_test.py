@@ -5,7 +5,6 @@ contact: ravmiecznk@gmail.com
 
 import sys
 sys.path.append('../my_thread')
-sys.path.append('../qt_thread')
 import pytest
 from message_box import WarningBox
 from PyQt4.QtTest import QTest
@@ -51,5 +50,5 @@ if __name__ == "__main__":
     r = mw.exec_()
     print r
     sys.exit(0)
-    sys.exit(app.exec_())
+    #sys.exit(app.exec_())
     print "bye"
